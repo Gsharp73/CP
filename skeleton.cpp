@@ -20,7 +20,7 @@ void sieve(int n)
                 isprime[i] = false;
 }
 int LCM(int a, int b) {
-    return (a * b) / GCD(a, b);
+    return (a * b) / __gcd(a, b);
 }
 bool checkprime(ll a)
 {
