@@ -7,9 +7,14 @@ using namespace std;
 #define double long double
 #define F first
 #define S second
-#define print(a) for(auto x:a)cout << x << " "; cout << endl;
+#define pb push_back
+#define print(a) for(auto i:a)cout << i << " "; cout << endl;
 #define input(a) for(auto &x:a)cin >> x;
 #define all(x) x.begin(),x.end()
+#define FOR(i,a,n) for(int i=a;i< n;i++)
+#define FORN(i,a,n) for(int i=0;i<=n;i++)
+#define mp make_pair
+#define pb push_back
 vector<bool> isprime;
 void sieve(int n)
 {
@@ -19,9 +24,10 @@ void sieve(int n)
             for (int i=p*2; i<=n+1; i += p)
                 isprime[i] = false;
 }
-int LCM(int a, int b) {
+int lcm(int a, int b) {
     return (a * b) / __gcd(a, b);
 }
+int binpow(int a,int b){int ans=1;while(b>0){if(b&1)ans=ans*a;a*=a;b>>=1;}return ans;}
 bool checkprime(ll a)
 {
     if(a<2) return false;
@@ -34,17 +40,22 @@ bool checkprime(ll a)
     }
     return true;
 }
-void solve(){
-    
+void go(){
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+}
+void solve(){	
+	
 }
 int main()
 {
 ios::sync_with_stdio(false);
 cin.tie(0);
-   int t=1;
-   cin >> t;
-   while(t--)
-   {
-        solve();  
-   }
+	int _=1;
+	cin >> _;
+	while(_--){
+		solve();
+	}
 }
