@@ -24,6 +24,9 @@ void sieve(int n)
             for (int i=p*2; i<=n+1; i += p)
                 isprime[i] = false;
 }
+// to get ith bit and with 1<<i
+// lower bound -> greater than or equal to x
+// upper bound -> greater than x
 int lcm(int a, int b) {
     return (a * b) / __gcd(a, b);
 }
@@ -57,7 +60,7 @@ int main()
 ios::sync_with_stdio(false);
 cin.tie(0);
 	int _=1;
-	cin >> _;
+	//cin >> _;
 	while(_--){
 		solve();
 	}
