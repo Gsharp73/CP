@@ -27,6 +27,9 @@ void sieve(int n)
 int lcm(int a, int b) {
     return (a * b) / __gcd(a, b);
 }
+int ceil(int a,int b){
+	return (a+b-1)/b;
+}
 int binpow(int a,int b){int ans=1;while(b>0){if(b&1)ans=ans*a;a*=a;b>>=1;}return ans;}
 bool checkprime(ll a)
 {
@@ -46,7 +49,7 @@ void go(){
     freopen("output.txt", "w", stdout);
     #endif
 }
-void solve(){	
+void solve(){
 	
 }
 int main()
