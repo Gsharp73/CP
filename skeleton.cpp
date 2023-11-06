@@ -15,6 +15,7 @@ using namespace std;
 #define FORN(i,a,n) for(int i=0;i<=n;i++)
 #define mp make_pair
 #define pb push_back
+#define tcT template<class T
 vector<bool> isprime;
 void sieve(int n)
 {
