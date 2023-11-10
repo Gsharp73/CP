@@ -9,7 +9,7 @@ using namespace std;
 #define S second
 #define pb push_back
 #define print(a) for(auto i:a)cout << i << " "; cout << endl;
-#define input(a) for(auto &x:a)cin >> x;
+#define input(a) for(int i=1;i<(int)a.size();i++)cin >> a[i];
 #define all(x) x.begin(),x.end()
 #define FOR(i,a,n) for(int i=a;i< n;i++)
 #define FORN(i,a,n) for(int i=0;i<=n;i++)
@@ -53,6 +53,11 @@ bool checkprime(ll a)
     }
     return true;
 }
+
+// to take input string with spaces after taking input integers 
+// cin.ignore(numeric_limits<streamsize>::max(), '\n');
+// getline(cin,s);
+
 void go(){
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
@@ -60,8 +65,9 @@ void go(){
     #endif
 }
 void solve() {
-    
+	
 }
+
 int main()
 {
 ios::sync_with_stdio(false);
