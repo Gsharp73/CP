@@ -4,18 +4,35 @@ using namespace std;
 #define srt(v) sort(v.begin(),v.end())
 #define desort(v) sort(v.begin(),v.end(),greater<int>())
 #define MOD 1000000007
-#define double long double
+#define db long double
 #define F first
 #define S second
 #define pb push_back
 #define print(a) for(auto i:a)cout << i << " "; cout << endl;
-#define input(a) for(int i=1;i<(int)a.size();i++)cin >> a[i];
+#define input(a) for(auto &i:a)cin >> i;
 #define all(x) x.begin(),x.end()
 #define FOR(i,a,n) for(int i=a;i< n;i++)
 #define FORN(i,a,n) for(int i=0;i<=n;i++)
 #define mp make_pair
 #define pb push_back
+#define sz(x) int((x).size())
 #define tcT template<class T
+
+using str = string; 
+using pi = pair<int, int>;
+using pl = pair<ll, ll>;
+using pd = pair<db, db>;
+tcT > using V = vector<T>;
+tcT, size_t SZ > using AR = array<T, SZ>;
+using vi = V<int>;
+using vb = V<bool>;
+using vl = V<ll>;
+using vd = V<db>;
+using vs = V<str>;
+using vpi = V<pi>;
+using vpl = V<pl>;
+using vpd = V<pd>;
+
 vector<bool> isprime;
 void sieve(int n)
 {
@@ -64,10 +81,9 @@ void go(){
     freopen("output.txt", "w", stdout);
     #endif
 }
-void solve() {
+void solve(){
 	
 }
-
 int main()
 {
 ios::sync_with_stdio(false);
