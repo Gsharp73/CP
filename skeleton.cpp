@@ -46,14 +46,17 @@ tcT> bool ckmin(T& a, const T& b) {
 	return b < a ? a = b, 1 : 0; } // set a = min(a,b)
 tcT> bool ckmax(T& a, const T& b) {
 	return a < b ? a = b, 1 : 0; }
+	
 // helper funcs
 constexpr int pct(int x) { return __builtin_popcount(x); } // # of bits set
 constexpr int bits(int x) { return 31-__builtin_clz(x); } // floor(log2(x)) 
 ll cdiv(ll a, ll b) { return a/b+((a^b)>0&&a%b); } // divide a by b rounded up
 ll fdiv(ll a, ll b) { return a/b-((a^b)<0&&a%b); } // divide a by b rounded down
+
 // to get ith bit and with 1<<i
 // lower bound -> greater than or equal to x
 // upper bound -> greater than x
+
 int lcm(int a, int b) {
     return (a * b) / __gcd(a, b);
 }
