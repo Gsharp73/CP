@@ -1,9 +1,12 @@
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp> // Common file  
+#include <ext/pb_ds/tree_policy.hpp>  
+#include <functional> // for less
 using namespace std;
+using namespace __gnu_pbds;
 #define ll long long
 #define srt(v) sort(v.begin(),v.end())
 #define desort(v) sort(v.begin(),v.end(),greater<int>())
-#define MOD 1000000007
 #define db long double
 #define F first
 #define S second
@@ -19,6 +22,7 @@ using namespace std;
 #define sz(x) int((x).size())
 #define tcT template<class T
 #define str string 
+#define theforce ios::sync_with_stdio(false);cin.tie(0);
 using pi = pair<int, int>;
 using pl = pair<ll, ll>;
 using pd = pair<db, db>;
@@ -32,7 +36,9 @@ using vs = V<str>;
 using vpi = V<pi>;
 using vpl = V<pl>;
 using vpd = V<pd>;
-
+typedef tree<int, null_type, less<int>, rb_tree_tag,  
+            tree_order_statistics_node_update>  
+    ordered_set;
 // to take input string with spaces after taking input integers 
 // cin.ignore(numeric_limits<streamsize>::max(), '\n');
 // getline(cin,s);
@@ -54,21 +60,29 @@ void go(){
     freopen("output.txt", "w", stdout);
     #endif
 }
-
 int N=1e5+10;
 vector<vector<int>> gp(N);
-vb vis(N);
+vb vis(N); 
+const int MOD = 1e9+7;
 
 void solve(){
-    
+     
 }
+
 int main()
 {
-ios::sync_with_stdio(false);
-cin.tie(0);
+    theforce;
     int _=1;
-    // cin >> _;
+    cin >> _;
     while(_--){
         solve();
     }
 }
+
+/* do smth instead of nothing and stay organized
+ * WRITE STUFF DOWN
+ * DON'T GET STUCK ON ONE APPROACH
+ * stuff you should look for
+ * int overflow, array bounds
+ * special cases (n=1?)
+ */
