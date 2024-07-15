@@ -1,6 +1,6 @@
 
 // ** for every letter at each node there is another node where you store the information and not in the current node **
-
+// ** NOTE: TRIE can also be used for bit manipulation problems like find the maximum xor possible from arr1[i] ^ arr2[j] 
 #include <bits/stdc++.h> 
 using namespace std;
 struct Node {
