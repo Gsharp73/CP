@@ -61,3 +61,4 @@ int maxXOR(int n, int m, vector<int> &arr1, vector<int> &arr2)
 int main() {
     
 }
+// https://www.naukri.com/code360/problems/maximum-xor_973113?leftPanelTabValue=PROBLEM
