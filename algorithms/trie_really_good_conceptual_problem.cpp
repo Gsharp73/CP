@@ -1,3 +1,6 @@
+
+// ** for every letter at each node there is another node where you store the information and not in the current node **
+
 #include <bits/stdc++.h> 
 using namespace std;
 struct Node {
