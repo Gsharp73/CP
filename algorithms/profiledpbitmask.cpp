@@ -6,6 +6,10 @@ using namespace std;
 // There are two ways to place: horizontally or vertically
 // The mask keeps track of the current state of the board row
 
+// THE MASK: THINK OF THE MASK BE LIKE shifting rightwards and we are adding 
+// the current state to the leftmost bit which eventually comes to current bit
+// after sliding through the mask
+
 int n, m;
 vector<vector<vector<int>>> dp;
 int vis[13][13];
@@ -24,7 +28,7 @@ int rec(int i, int j, int mask) {
     if (dp[i][j][mask] != -1) return dp[i][j][mask];
 
     int ans = 0;
-    if (i != 0 && (mask & 1) == 0) {
+    if (i != 0 && (mask & 1) == 0) { // checking the upper part 
         // Placing vertically
         int new_mask = (mask >> 1) | (1 << (m - 1));
         if (check(i, j + 1)) {
