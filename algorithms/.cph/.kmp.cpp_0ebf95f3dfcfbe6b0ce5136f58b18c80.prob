@@ -1,0 +1,1 @@
+{"name":"Local: kmp","url":"/home/gminor/Desktop/CP/algorithms/kmp.cpp","tests":[{"id":1726841555258,"input":"1\naaaaab ab","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/gminor/Desktop/CP/algorithms/kmp.cpp","group":"local","local":true}
