@@ -1,0 +1,1 @@
+{"name":"Local: BIT","url":"/home/gminor/Desktop/CP/algorithms/BIT.cpp","tests":[{"id":1729405049209,"input":"5\n1 2 3 4 5\n4\n0 1 4 \n1 1 10\n0 1 3\n0 2 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/gminor/Desktop/CP/algorithms/BIT.cpp","group":"local","local":true}
