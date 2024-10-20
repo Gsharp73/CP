@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-
+// max min or gcd
 template <typename T>
 class SparseTable {
 private:
