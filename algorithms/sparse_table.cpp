@@ -6,26 +6,26 @@ template <typename T>
 class SparseTable {
 private:
     vector<vector<T>> table;
-    vector<int> logValues;
+    vector<int> bin_log;
     int n;
 
 public:
-    SparseTable(vector<T>& v) {
-        n = v.size();
+    SparseTable(vector<T>& arr) {
+        n = arr.size();
         int log = 32 - __builtin_clz(n);
         table.resize(n, vector<T>(log));
-        logValues.resize(n + 1);
-
-        logValues[1] = 0;
+        bin_log.resize(n + 1);
+        bin_log[1] = 0;
         for (int i = 2; i <= n; i++) {
-            logValues[i] = logValues[i / 2] + 1;
+            bin_log[i] = bin_log[i / 2] + 1;
         }
-        build(v);
+
+        build(arr);
     }
 
-    void build(vector<T>& v) { // N log(N)
+    void build(vector<T>& arr) { // Nlog(N)
         for (int i = 0; i < n; i++) {
-            table[i][0] = v[i];
+            table[i][0] = arr[i];
         }
 
         for (int j = 1; (1 << j) <= n; j++) {
@@ -37,7 +37,7 @@ public:
 
     T query(int L, int R) {
         int length = R - L + 1;
-        int k = logValues[length];
+        int k = bin_log[length];
         return min(table[L][k], table[R - (1 << k) + 1][k]);
     }
 };
@@ -58,7 +58,7 @@ int main() {
         while (q--) {
             ll l, r;
             cin >> l >> r;
-            l--, r--;
+            // l--, r--;
             cout << spt.query(l, r) << endl;
         }
     }
