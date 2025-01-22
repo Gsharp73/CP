@@ -1,38 +1,57 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 2e5;
-pair<int, int> parent[N];
-int rankk[N];
+#define int long long
 
-void make_set(int v) {
-    parent[v] = make_pair(v, 0);
-    rankk[v] = 0;
-}
+template <typename T>
+class dsu {
+private:
+    vector<pair<T, int>> parent;
+    vector<int> rankk;
 
-pair<int, int> find_set(int v) {
-    if (v != parent[v].first) {
-        int len = parent[v].second;
-        parent[v] = find_set(parent[v].first);
-        parent[v].second += len;
+public:
+    dsu(int size) {
+        parent.resize(size);
+        rankk.resize(size, 0);
     }
-    return parent[v];
+
+    void make_set(T v) {
+        parent[v] = std::make_pair(v, 0);
+        rankk[v] = 0;
+    }
+
+    pair<T, int> find_set(T v) {
+        if (v != parent[v].first) {
+            int len = parent[v].second;
+            parent[v] = find_set(parent[v].first);
+            parent[v].second += len;
+        }
+        return parent[v];
+    }
+
+    void union_sets(T a, T b) {
+        a = find_set(a).first;
+        b = find_set(b).first;
+        if (a == b) {
+            return;
+        }
+        if (rankk[a] < rankk[b]) {
+            swap(a, b);
+        }
+        parent[b] = make_pair(a, 1);
+        if (rankk[a] == rankk[b]) {
+            rankk[a]++;
+        }
+    }
+};
+
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0);
+
+    int tc; cin >> tc;
+    while (tc--) {
+        
+    }
 }
 
-void union_sets(int a, int b) {
-    a = find_set(a).first;
-    b = find_set(b).first;
-    if (a == b) {
-        return;
-    }
-    if (rankk[a] < rankk[b]) {
-        swap(a, b);
-    }
-    parent[b] = make_pair(a, 1);
-    if (rankk[a] == rankk[b]) {
-        rankk[a]++;
-    } 
-}
-int main() {
-
-}
