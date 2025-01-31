@@ -10,7 +10,7 @@ private:
         tin[v] = ++timer;
         up[v][0] = p;
         
-        for (int i = 1; i <= l; ++i)
+        for (int i = 1; i <= l; i++)
             up[v][i] = up[up[v][i-1]][i-1];
             
         for (auto u : adj[v]) {
